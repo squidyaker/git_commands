@@ -1,0 +1,79 @@
+GIT commands
+------------------------------------------------------------------------------
+
+shift + q  // breaks out command line
+
+git command --help
+
+
+// change directory
+cd 									
+
+// list all in directory
+ls -la 								
+
+// personal working directory
+pwd  								
+
+// lets you know if any updates have been added to queue
+git status 							
+
+// shows all commits
+git log 							
+
+// shows all commits in oneline with shortened SHA-1
+git log --oneline 					
+
+// shows last 5 commits
+git log --oneline -5 				
+
+// commit changes to file (local operation)
+git commit -am "message goes here" 	
+
+// shows changes actually made
+git diff orgin/master..master 		
+
+// state what branch you are on
+git branch 							
+------------------------------------------------------------------------------
+// BRANCHING
+git branch
+
+cat .git/HEAD
+
+// add a new branch
+git branch new_filename
+
+ls -la .git/refs/heads 
+
+// change branch
+git checkout branch_name
+------------------------------------------------------------------------------
+// CLONING A REMOTE REPOSITORY
+
+1. go to github and find a project. copy link.
+
+//copy
+git clone https://github/filename/here version_name 
+------------------------------------------------------------------------------
+// TRACKING REMOTE BRANCHES
+cat .git/config
+
+
+------------------------------------------------------------------------------
+// PUSHING TO REMOTE REPOSITORIES
+
+git push orgin file_name
+
+------------------------------------------------------------------------------
+// FETCH: GRABS FILES FROM REPOSITORY
+git fetch
+
+// MERGING FETCH CHANGES
+git merge orgin/master
+
+// git pull = git fetch + git merge
+------------------------------------------------------------------------------
+// SETTING UP ALIASES
+1. set up file is user directory in .gitconfig
+git config --global alias.st status //alias.new_command old_command or "old_command"
